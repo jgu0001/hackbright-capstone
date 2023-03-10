@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "3fb87defea44462ba90b127ffd5e7126";
+const API_KEY = "";
 const BASE_URL = "https://api.spoonacular.com";
 
 export const searchRecipesByIngredients = (ingredients) => {
@@ -9,7 +9,7 @@ export const searchRecipesByIngredients = (ingredients) => {
 };
 
 export const getRecipeById = (id) => {
-  const url = `${BASE_URL}/${id}/recipes/information?apiKey=${API_KEY}`;
+  const url = `${BASE_URL}/recipes/${id}/information?apiKey=${API_KEY}`;
   return axios.get(url);
 };
 
